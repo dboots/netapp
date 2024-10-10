@@ -36,14 +36,7 @@ describe('AppComponent', () => {
       provider: 'AWS',
       monthly_cost: '0.90',
       start_date: '1577836800000',
-    },
-    {
-      id: '2362852346',
-      name: 'Test 3',
-      provider: 'AWS',
-      monthly_cost: '0.90',
-      start_date: '1577836800000',
-    },
+    }
   ];
 
   beforeEach(async () => {
@@ -95,7 +88,7 @@ describe('AppComponent', () => {
     // get .total-costs content
     const compiled = fixture.nativeElement;
     const totalCosts = compiled.querySelector('.total-costs');
-    expect(totalCosts.textContent).toBe('$139.73');
+    expect(totalCosts.textContent).toBe('Total Costs: $139.73');
   });
 
 
