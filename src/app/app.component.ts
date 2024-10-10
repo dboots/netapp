@@ -63,10 +63,10 @@ export class AppComponent {
     });
   }
 
-  calculateTotalMonthlyCost(monthlyCost: string, startDate: string, endDate: number = new Date().getTime()): string {
+  calculateTotalMonthlyCost(monthlyCost: string, startDate: string, endDate?: number): string {
     const monthlyCostNumber = parseFloat(monthlyCost);
     const startDateNumber = parseFloat(startDate);
-    const currentDate = endDate;
+    const currentDate = endDate || new Date().getTime();
     const months = (currentDate - startDateNumber) / (1000 * 60 * 60 * 24 * 30);
     return (monthlyCostNumber * months).toFixed(2);
   }
