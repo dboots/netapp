@@ -16,6 +16,7 @@ import { ServerCost } from '../../interfaces/server-cost';
 })
 export class TableComponent implements AfterViewInit {
   @Input() tableData: ServerCost[] = [];
+  @Input() title: string = '';
   displayedColumns: string[] = [
     'name',
     'provider',
